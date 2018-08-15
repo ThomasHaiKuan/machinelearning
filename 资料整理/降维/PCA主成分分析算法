@@ -1,0 +1,11 @@
+
+import numpy as np
+from sklearn.decomposition import PCA
+
+matrix = np.array(X)
+pca = PCA(n_components='mle', svd_solver='auto').fit(matrix)
+result = pca.transform(matrix)
+label = result.tolist()
+return label, pca.components_.tolist(), pca.explained_variance_.tolist(), pca.explained_variance_ratio_.tolist(), pca.mean_.tolist(), pca.noise_variance_
+
+

@@ -1,0 +1,20 @@
+
+from sklearn.lda import LDA
+import numpy as np
+from sklearn import preprocessing
+
+matrix = np.array(X)
+target = np.array(target)
+temp = LDA(n_components=n_components).fit(matrix, target)
+coef = temp.coef_
+mean = temp.means_
+priors = temp.priors_
+scalings = temp.scalings_
+xbar = temp.xbar_
+label = temp.transform(matrix).tolist()
+return label, coef.tolist(), mean.tolist(), priors.tolist(), scalings.tolist(), xbar.tolist()
+
+# X: array-like
+# target: array-like
+# n_components: int
+# http://scikit-learn.org/0.15/modules/generated/sklearn.lda.LDA.html

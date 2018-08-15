@@ -1,0 +1,9 @@
+
+import numpy as np
+from sklearn import preprocessing
+
+raw_result = preprocessing.OneHotEncoder().fit_transform(np.array(X))
+result = raw_result.tolist()
+
+# X: array-like
+# http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html

@@ -1,0 +1,14 @@
+
+import numpy as np
+from sklearn.manifold import TSNE
+
+matrix = np.array(X)
+t_sne = TSNE(n_components=2, random_state=0)
+np.set_printoptions(suppress=True)
+result = t_sne.fit(matrix)
+kl_divergence = result.kl_divergence_
+label = t_sne.fit_transform(matrix).tolist()
+
+return label, kl_divergence
+# X: array-like
+# http://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
