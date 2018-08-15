@@ -1,0 +1,3 @@
+import numpy as np
+##平均数##
+np.average(np.array(X))
