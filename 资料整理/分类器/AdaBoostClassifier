@@ -1,0 +1,16 @@
+
+# 决策树集成
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+
+adaboost_dt_clf = AdaBoostClassifier(
+                                    DecisionTreeClassifier(
+                                        max_depth=2,   # 决策树最大深度，默认可不输入即不限制子树深度
+                                        min_samples_split=20, # 内部结点再划分所需最小样本数，默认值为2，若样本量不大，无需更改，反之增大
+                                        min_samples_leaf=5    # 叶子节点最少样本数,默认值为1，若样本量不大，无需更改，反之增大
+                                        ),
+                                    algorithm="SAMME", # boosting 算法 {‘SAMME’, ‘SAMME.R’}, 默认为后者
+                                    n_estimators=200,  # 最多200个弱分类器，默认值为50
+                                    learning_rate=0.8  # 学习率，默认值为1
+                                     )
+adaboost_dt_clf.fit(X,y)

@@ -1,0 +1,9 @@
+
+# http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier
+from sklearn.linear_model import SGDClassifier
+
+clf = SGDClassifier(loss="hinge", penalty="l2")
+clf.fit(X, y)
+
+# 数组 X shape:[n_samples, n_features]
+# 数组 y shape:[n_samples]

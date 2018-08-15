@@ -1,0 +1,22 @@
+
+# http://scikit-learn.org/dev/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
+from sklearn import svm
+import numpy as np
+
+# Classifier Option 1: SVC()
+clf = svm.SVC()       # kernel = 'linear' or 'rbf' (default) or 'poly' or custom kernels; penalty C = 1.0 (default)
+# Option 2: NuSVC()
+# clf = svm.NuSVC() 
+# Option 3: LinearSVC()
+# clf = svm.LinearSVC()     # penalty : str, ‘l1’ or ‘l2’ (default=’l2’)
+clf.fit(X, y)                # X shape = [n_samples, n_features], y shape = [n_samples] or [n_samples, n_outputs]
+
+# print(clf.support_vectors_) # get support vectors
+# print(clf.support_)         # get indeices of support vectors
+# print(clf.n_support_)       # get number of support vectors for each class
+
+mean_accuracy = clf.score(X,y)
+print("Accuracy: %.3f"%(mean_accuracy))
+
+
+

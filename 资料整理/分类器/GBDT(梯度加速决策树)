@@ -1,0 +1,9 @@
+
+# http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html#sklearn.ensemble.GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+
+gbdt = GradientBoostingClassifier(max_depth=4,   # 决策树最大深度，默认可不输入，即不限制子树深度
+                                max_features="auto",  # 寻找最优分割的特征数量，可为int,float,"auto","sqrt","log2",None:
+                                n_estimators=100 # Boosting阶段的数量，默认值为100。
+                                )
+gbdt.fit(X,y)

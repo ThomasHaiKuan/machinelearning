@@ -1,0 +1,7 @@
+
+# http://scikit-learn.org/stable/modules/linear_model.html
+from sklearn import linear_model
+
+lr =linear_model.LogisticRegression()  # penalty : str, ‘l1’ or ‘l2’, default: ‘l2’
+lr.fit(X, y)
+

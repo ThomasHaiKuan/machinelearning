@@ -1,0 +1,7 @@
+
+#http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+from sklearn.tree import DecisionTreeClassifier
+
+# criterion = "gini" (CART) or "entropy" (ID3)
+clf = DecisionTreeClassifier(criterion = 'entropy' ,random_state = 0)
+clf.fit(X,y)

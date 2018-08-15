@@ -1,0 +1,8 @@
+
+# http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
+from sklearn.naive_bayes import GaussianNB
+
+gnb = GaussianNB()
+# predict(test_set或者train_set) 值为你需要预测的数据集
+y_pred = gnb.fit(X, y).predict(X)
+print("Number of mislabeled points out of a total %d points : %d" % (X.shape[0],(y != y_pred).sum()))

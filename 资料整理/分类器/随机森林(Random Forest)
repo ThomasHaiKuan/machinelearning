@@ -1,0 +1,10 @@
+
+# http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+
+# criterion: str, 'gini' for Gini impurity (Default) and “entropy” for the information gain.
+clf = RandomForestClassifier(criterion='gini')  
+# X: array-like, shape = [n_samples, n_features]
+# y: array-like, shape = [n_samples] or [n_samples, n_outputs]
+clf.fit(np.array(X), np.array(y))

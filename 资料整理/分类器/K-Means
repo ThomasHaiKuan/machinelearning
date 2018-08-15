@@ -1,0 +1,12 @@
+
+# 聚类
+# http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+from sklearn.cluster import KMeans
+
+kmeans = KMeans(
+                n_clusters = 2, # 簇的个数，默认值为8
+                random_state=0  
+                ).fit(X)
+
+print(kmeans.labels_)
+print("K Clusters Centroids:\n", kmeans.cluster_centers_)
